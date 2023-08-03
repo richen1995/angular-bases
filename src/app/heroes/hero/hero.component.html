@@ -1,0 +1,21 @@
+<p>hero works!</p>
+
+<button *ngIf="true">opcion</button>
+<button *ngIf="undefined">opcion</button>
+<button *ngIf="null">opcion</button>
+<button *ngIf="0">opcion</button>
+<button *ngIf="-1">opcion</button>
+
+<button (click)="removeLastSheet()">Eliminar Aldea</button>     
+
+<div *ngFor="let name  of heroNames">
+    {{name}}
+</div>
+
+<div *ngIf="deleteHeros; else nothingWasDeleted">
+    <h1>Elemento eliminado: {{deleteHeros}}</h1>
+</div>
+              
+<ng-template #nothingWasDeleted>
+    <h1>No ha borrado nada aun</h1>
+</ng-template>
